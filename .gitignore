@@ -15,7 +15,12 @@ ios/Pods/
 android/.gradle/
 android/app/build/
 
-# Miscellaneous #
-*.log
-*.backup
-*.orig
+# Expo specific directories #
+/node_modules/.bin/
+.expo/
+.expo-shared/
+.cache/
+.cache-loader/
+/.expo/
+.web/
+.yarn/

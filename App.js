@@ -5,11 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DemoScholarPage from './src/pages/DemoScholarPage';
 import LoginPage from './src/pages/LoginPage';
 import PersonalInfo from './src/pages/EditpersonalInfo'; // Import your PersonalInfoPage
-<<<<<<< Updated upstream
 import UserProfilePage from './src/pages/UserProfilePage';
-=======
 import SchoolRecordPage from './src/pages/SchoolRecordPage';
->>>>>>> Stashed changes
 import { Ionicons } from '@expo/vector-icons'; // Assuming you're using Expo
 
 const Tab = createBottomTabNavigator();
@@ -53,11 +50,8 @@ const App = () => {
           <Tab.Screen name="DemoScholar" component={DemoScholarPage} options={{ title: 'Scholarships' }} />
           {/* Add the PersonalInfoPage to the Tab.Navigator */}
           <Tab.Screen name="PersonalInfo" component={PersonalInfo} options={{ title: 'Edit User Profile' }} />
-<<<<<<< Updated upstream
           <Tab.Screen name="UserInfo" component={UserProfilePage} options={{ title: 'User Profile' }} />
-=======
           <Tab.Screen name="SchoolRecord" component={SchoolRecordPage} options={{ title: 'School Record' }} />
->>>>>>> Stashed changes
         </Tab.Navigator>
       ) : (
         <AuthStack setIsLoggedIn={setIsLoggedIn} />

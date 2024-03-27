@@ -24,25 +24,25 @@ const LoginPage = ({ navigation, route }) => {
       <Swiper style={styles.wrapper} showsButtons={false} loop={false}>
         <View style={styles.slide}>
           <Image 
-            source={require('/Applications/Work/TUKUNGKUNG/tukungkung/assets/tuview.png')}
+            source={require('../../assets/tuview.png')}
             style={styles.imageTop}
           />
         </View>
         <View style={styles.slide}>
           <Image 
-            source={require('/Applications/Work/TUKUNGKUNG/tukungkung/assets/tuview2.png')}
+            source={require('../../assets/tuview2.png')}
             style={styles.imageTop}
           />
         </View>
         <View style={styles.slide}>
           <Image 
-            source={require('/Applications/Work/TUKUNGKUNG/tukungkung/assets/tuview3.png')}
+            source={require('../../assets/tuview3.png')}
             style={styles.imageTop}
           />
         </View>
         <View style={styles.slide}>
           <Image 
-            source={require('/Applications/Work/TUKUNGKUNG/tukungkung/assets/tuview4.png')}
+            source={require('../../assets/tuview4.png')}
             style={styles.imageTop}
           />
         </View>
@@ -51,12 +51,12 @@ const LoginPage = ({ navigation, route }) => {
       <View style={styles.content}>
         <View style={styles.logoContainer}>
           <Image 
-            source={require('/Applications/Work/TUKUNGKUNG/tukungkung/assets/tulogo.png')}
+            source={require('../../assets/tulogo.png')}
             style={styles.logo}
           />
           <View style={styles.kungContainer}>
             <Image
-              source={require('/Applications/Work/TUKUNGKUNG/tukungkung/assets/kung.png')}
+              source={require('../../assets/kung.png')}
               style={styles.kungImage}
             />
             <Text style={styles.kungText}>2 KUNG</Text>

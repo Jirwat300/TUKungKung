@@ -84,6 +84,14 @@ const PersonalInfoForm = () => {
         onChangeText={setCurrentAddress}
         value={currentAddress}
         placeholder="Enter your current address"
+      /> 
+
+      <Text style={styles.label}>โรคประจำตัว:</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={setCurrentAddress}
+        value={currentAddress}
+        placeholder="Enter chronic disease"
       />
 
       <Button title="Confirm Edit" onPress={handleSubmit} />

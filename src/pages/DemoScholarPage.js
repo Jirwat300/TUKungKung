@@ -25,6 +25,7 @@ const scholarData = [
   // Add more items as needed
 ];
 
+// test
 const DemoScholarPage = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>

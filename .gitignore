@@ -1,2 +1,21 @@
+# OS generated files #
+.DS_Store
+Thumbs.db
 
-/node_modules
+# Node.js dependencies #
+node_modules/
+
+# Metro Bundler cache directory #
+/metro-cache
+
+# Dependency directory #
+# It's a good idea to ignore the ios and android directories, as well as the .gradle folder
+# if you're using Android Studio for development.
+ios/Pods/
+android/.gradle/
+android/app/build/
+
+# Miscellaneous #
+*.log
+*.backup
+*.orig

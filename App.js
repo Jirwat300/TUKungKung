@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DemoScholarPage from './src/pages/DemoScholarPage';
 import LoginPage from './src/pages/LoginPage';
 import PersonalInfo from './src/pages/EditpersonalInfo'; // Import your PersonalInfoPage
+import UserProfilePage from './src/pages/UserProfilePage';
 import { Ionicons } from '@expo/vector-icons'; // Assuming you're using Expo
 
 const Tab = createBottomTabNavigator();
@@ -48,6 +49,7 @@ const App = () => {
           <Tab.Screen name="DemoScholar" component={DemoScholarPage} options={{ title: 'Scholarships' }} />
           {/* Add the PersonalInfoPage to the Tab.Navigator */}
           <Tab.Screen name="PersonalInfo" component={PersonalInfo} options={{ title: 'Edit User Profile' }} />
+          <Tab.Screen name="UserInfo" component={UserProfilePage} options={{ title: 'User Profile' }} />
         </Tab.Navigator>
       ) : (
         <AuthStack setIsLoggedIn={setIsLoggedIn} />

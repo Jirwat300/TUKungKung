@@ -2,17 +2,58 @@ import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import DemoScholarPage from './src/pages/DemoScholarPage';
 import LoginPage from './src/pages/LoginPage';
-import PersonalInfo from './src/pages/EditpersonalInfo'; // Import your PersonalInfoPage
-import UserProfilePage from './src/pages/UserProfilePage';
-import SchoolRecordPage from './src/pages/SchoolRecordPage';
-import Home from './src/pages/Home';
-import { Ionicons } from '@expo/vector-icons'; // Assuming you're using Expo
+import PersonalInfo from './src/pages/EditpersonalInfo';
+import { Ionicons } from '@expo/vector-icons';
+import FacilityHomepage from './src/pages/FacilityHomepage'; // Import is correct
+import Bookingpage from './src/pages/Bookingpage.js';
+import UserProfile from './src/pages/UserProfilePage'
+import Home from './src/pages/Home'
+import DemoScholar from './src/pages/DemoScholarPage'
+import EvMapPage from './src/pages/EVmap.js';
+import HornaiiPage from './src/pages/Hornaii.js';
+import HealthyServicePage from './src/pages/HealthyService.js';
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+const FacilityStack = () => (
+  <Stack.Navigator>
+    <Stack.Screen
+      name="FacilityHomepage"
+      component={FacilityHomepage}
+      options={{ title: 'Facility' }}
+    />
+    <Stack.Screen
+      name="Booking"
+      component={Bookingpage}
+      options={{ title: 'Book Facility' }}
+    />
+    <Stack.Screen
+      name="Scholar"
+      component={DemoScholar}
+      options={{ title: 'Demo Scholar' }}
+    />
+    <Stack.Screen
+      name="Evmap"
+      component={EvMapPage}
+      options={{ title: 'Ev Map' }}
+    />
+    <Stack.Screen
+      name="Hornaii"
+      component={HornaiiPage}
+      options={{ title: 'Hornaii' }}
+    />
+    <Stack.Screen
+      name="HealthyService"
+      component={HealthyServicePage}
+      options={{ title: 'Healthy' }}
+    />
+  </Stack.Navigator>
+);
+
+// Auth stack for login and conditional rendering
 const AuthStack = ({ setIsLoggedIn }) => (
   <Stack.Navigator>
     <Stack.Screen
@@ -34,27 +75,19 @@ const App = () => {
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
-
-              if (route.name === 'DemoScholar') {
-                iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
+              if (route.name === 'Facility') {
+                iconName = focused ? 'ios-home' : 'ios-home-outline';
               } else if (route.name === 'PersonalInfo') {
                 iconName = focused ? 'ios-person-circle' : 'ios-person-circle-outline';
               }
-
-              // Only return an icon if one is set
               return iconName ? <Ionicons name={iconName} size={size} color={color} /> : null;
             },
             tabBarActiveTintColor: 'tomato',
             tabBarInactiveTintColor: 'gray',
           })}
         >
-          <Tab.Screen name="DemoScholar" component={DemoScholarPage} options={{ title: 'Scholarships' }} />
-          {/* Add the PersonalInfoPage to the Tab.Navigator */}
+          <Tab.Screen name="Facility" component={FacilityStack} options={{ headerShown: false }} />
           <Tab.Screen name="PersonalInfo" component={PersonalInfo} options={{ title: 'Edit User Profile' }} />
-          <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
-          <Tab.Screen name="UserInfo" component={UserProfilePage} options={{ title: 'User Profile' }} />
-          <Tab.Screen name="SchoolRecord" component={SchoolRecordPage} options={{ title: 'School Record' }} />
-          
         </Tab.Navigator>
       ) : (
         <AuthStack setIsLoggedIn={setIsLoggedIn} />

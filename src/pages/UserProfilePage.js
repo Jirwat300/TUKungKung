@@ -16,7 +16,7 @@ const UserProfilePage = () => {
     <ScrollView style={styles.container}>
       <StudentInfoCard studentData={studentMockupData} />
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>การลงทะเบียนเรียน</Text>
+        <Text style={styles.buttonText}>ข้อมูลนักศึกษา</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>ผลการลงทะเบียนเรียน</Text>
@@ -28,7 +28,7 @@ const UserProfilePage = () => {
         <Text style={styles.buttonText}>รายการชำระเงิน</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>แผนที่รถ EV</Text>
+        <Text style={styles.buttonText}>ตาราเรียน/ตารางสอบ</Text>
       </TouchableOpacity>
     </ScrollView>
   );

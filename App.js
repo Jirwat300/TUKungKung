@@ -7,6 +7,7 @@ import LoginPage from './src/pages/LoginPage';
 import PersonalInfo from './src/pages/EditpersonalInfo'; // Import your PersonalInfoPage
 import UserProfilePage from './src/pages/UserProfilePage';
 import SchoolRecordPage from './src/pages/SchoolRecordPage';
+import Home from './src/pages/Home';
 import { Ionicons } from '@expo/vector-icons'; // Assuming you're using Expo
 
 const Tab = createBottomTabNavigator();
@@ -50,8 +51,10 @@ const App = () => {
           <Tab.Screen name="DemoScholar" component={DemoScholarPage} options={{ title: 'Scholarships' }} />
           {/* Add the PersonalInfoPage to the Tab.Navigator */}
           <Tab.Screen name="PersonalInfo" component={PersonalInfo} options={{ title: 'Edit User Profile' }} />
+          <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
           <Tab.Screen name="UserInfo" component={UserProfilePage} options={{ title: 'User Profile' }} />
           <Tab.Screen name="SchoolRecord" component={SchoolRecordPage} options={{ title: 'School Record' }} />
+          
         </Tab.Navigator>
       ) : (
         <AuthStack setIsLoggedIn={setIsLoggedIn} />

@@ -13,6 +13,7 @@ import DemoScholar from './src/pages/DemoScholarPage'
 import EvMapPage from './src/pages/EVmap.js';
 import HornaiiPage from './src/pages/Hornaii.js';
 import HealthyServicePage from './src/pages/HealthyService.js';
+import Timetable from './src/pages/Timetable.js'
 
 
 const Tab = createBottomTabNavigator();
@@ -79,6 +80,8 @@ const App = () => {
                 iconName = focused ? 'ios-home' : 'ios-home-outline';
               } else if (route.name === 'PersonalInfo') {
                 iconName = focused ? 'ios-person-circle' : 'ios-person-circle-outline';
+              } else if (route.name === 'Timetable') {
+                iconName = focused ? 'ios-table' : 'ios-table-outline';
               }
               return iconName ? <Ionicons name={iconName} size={size} color={color} /> : null;
             },
@@ -88,6 +91,7 @@ const App = () => {
         >
           <Tab.Screen name="Facility" component={FacilityStack} options={{ headerShown: false }} />
           <Tab.Screen name="PersonalInfo" component={PersonalInfo} options={{ title: 'Edit User Profile' }} />
+          <Tab.Screen name="PersonalInfo" component={Timetable} options={{ title: 'TimeTable' }} />
         </Tab.Navigator>
       ) : (
         <AuthStack setIsLoggedIn={setIsLoggedIn} />

@@ -95,8 +95,8 @@ const App = () => {
           })}
         >
           <Tab.Screen name="Facility" component={FacilityStack} options={{ headerShown: false }} />
-          <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
           <Tab.Screen name="Timetable" component={Timetable} options={{ title: 'TimeTable' }} />
+          <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
           <Tab.Screen name="Profile" component={UserProfile} options={{ title: 'Profile' }} />
           <Tab.Screen name="Menubar" component={Menubar} options={{ title: 'Menubar' }} />
         </Tab.Navigator>

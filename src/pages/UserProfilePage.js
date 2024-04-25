@@ -21,7 +21,7 @@ const UserProfilePage = () => {
           <Text style={styles.buttonText}>ข้อมูลนักศึกษา</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, styles.buttonShadow]}>
-          <Text style={styles.buttonText}>ผลการลงทะเบียนเรียน</Text>
+          <Text style={styles.buttonText}>ทำบัตรนักศึกษา</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, styles.buttonShadow]}>
           <Text style={styles.buttonText}>ผลการเรียน</Text>

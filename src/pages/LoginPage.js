@@ -10,8 +10,7 @@ const LoginPage = ({ navigation, route }) => {
 
   const handleLogin = () => {
     setIsLoggedIn(true);
-    // Navigate to DemoScholarPage upon successful login
-    navigation.navigate('DemoScholar');
+    navigation.navigate('Home');
   };
 
   const handleForget = () => {

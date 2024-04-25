@@ -77,12 +77,12 @@ const App = () => {
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
               if (route.name === 'Facility') {
+                iconName = focused ? 'ios-appstore-o' : 'ios-appstore-o-outline';
+              } else if (route.name === 'Home') {
                 iconName = focused ? 'ios-home' : 'ios-home-outline';
-              } else if (route.name === 'PersonalInfo') {
-                iconName = focused ? 'ios-person-circle' : 'ios-person-circle-outline';
               } else if (route.name === 'Timetable') {
                 iconName = focused ? 'ios-table' : 'ios-table-outline';
-              }
+              } 
               return iconName ? <Ionicons name={iconName} size={size} color={color} /> : null;
             },
             tabBarActiveTintColor: 'tomato',
@@ -90,8 +90,8 @@ const App = () => {
           })}
         >
           <Tab.Screen name="Facility" component={FacilityStack} options={{ headerShown: false }} />
-          <Tab.Screen name="PersonalInfo" component={PersonalInfo} options={{ title: 'Edit User Profile' }} />
-          <Tab.Screen name="PersonalInfo" component={Timetable} options={{ title: 'TimeTable' }} />
+          <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
+          <Tab.Screen name="Timetable" component={Timetable} options={{ title: 'TimeTable' }} />
         </Tab.Navigator>
       ) : (
         <AuthStack setIsLoggedIn={setIsLoggedIn} />

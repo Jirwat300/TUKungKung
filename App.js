@@ -17,6 +17,7 @@ import Timetable from './src/pages/Timetable.js'
 import Menubar from './src/pages/Menubar.js'
 import UserInfopage from './src/pages/UserInfopage.js';
 import StudentCardPage from './src/pages/StudentCard.js';
+import SchoolRecordPage from './src/pages/SchoolRecordPage.js'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -77,6 +78,11 @@ const ProfileStack = () => (
       name="EditInfo"
       component={EditPersonalInfo}
       options={{ title: 'EditInfo' }}
+    />
+    <Stack.Screen
+      name="SchoolRecord"
+      component={SchoolRecordPage}
+      options={{ title: 'SchoolRecord' }}
     />
   </Stack.Navigator>
 );

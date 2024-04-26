@@ -25,11 +25,13 @@ const SchoolRecordPage = () => {
         <Text style={styles.termText}>ภาคเรียน 1/2567</Text>
       </View>
       <View style={styles.recordList}>
-        {records.map(record => (
+        {records.map((record) => (
           <View key={record.id} style={styles.recordItem}>
             <Text style={styles.subjectText}>{record.subject}</Text>
             <Text style={styles.creditsText}>{record.credits} หน่วยกิต</Text>
-            <Text style={styles.gradeText}>{record.grade}</Text>
+            <View style={styles.gradeContainer}>
+              <Text style={styles.gradeText}>{record.grade}</Text>
+            </View>
           </View>
         ))}
         <View style={styles.totalCreditsContainer}>
@@ -49,63 +51,74 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
-    padding: 10,
+    padding: 20,
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    backgroundColor: '#2196F3', // Modern blue color
   },
   headerText: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
+    color: '#fff',
   },
   termText: {
-    fontSize: 16,
-    color: '#555',
-    marginTop: 4,
+    fontSize: 18,
+    color: '#fff',
+    marginTop: 8,
   },
   recordList: {
-    padding: 10,
+    padding: 20,
   },
   recordItem: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 5,
-    marginBottom: 10,
-    backgroundColor: '#f9f9f9',
+    alignItems: 'center',
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: '#f5f5f5', // Light gray background
+    marginBottom: 12,
   },
   subjectText: {
-    fontSize: 16,
+    fontSize: 18,
+    fontWeight: 'bold',
     color: '#333',
+    flex: 1,
   },
   creditsText: {
     fontSize: 16,
     color: '#555',
   },
+  gradeContainer: {
+    backgroundColor: '#4CAF50', // Green color for grade
+    padding: 8,
+    borderRadius: 4,
+    marginLeft: 12,
+  },
   gradeText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   totalCreditsContainer: {
-    padding: 10,
+    padding: 16,
     alignItems: 'center',
+    backgroundColor: '#f5f5f5', // Light gray background
+    borderRadius: 8,
+    marginTop: 20,
   },
   totalCreditsText: {
-    fontSize: 16,
-    color: '#555',
+    fontSize: 18,
+    color: '#333',
   },
   totalGPAContainer: {
-    padding: 10,
+    padding: 16,
     alignItems: 'center',
-    borderTopWidth: 1,
-    borderTopColor: '#ddd',
+    backgroundColor: '#FFC107', // Yellow color for GPA
+    borderRadius: 8,
+    marginTop: 12,
   },
   totalGPAText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
+    color: '#333',
   },
 });
 

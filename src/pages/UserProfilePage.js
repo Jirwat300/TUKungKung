@@ -27,6 +27,10 @@ const UserProfilePage = () => {
     navigation.navigate('EditInfo'); // Ensure 'EditInfo' matches the route name in your stack navigator
   };
 
+  const handleSchoolRecordPress = () => {
+    navigation.navigate('SchoolRecord'); // Ensure 'SchoolRecordPage' matches the route name in your stack navigator
+  };
+
   return (
     <ScrollView style={styles.container}>
       <StudentInfoCard studentData={studentMockupData} />
@@ -51,13 +55,9 @@ const UserProfilePage = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.button, styles.buttonShadow, { backgroundColor: '#FF4500' }]}
+          onPress={handleSchoolRecordPress}
         >
           <Text style={styles.buttonText}>ผลการเรียน</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.button, styles.buttonShadow, { backgroundColor: '#FF0000' }]}
-        >
-          <Text style={styles.buttonText}>ตารางเรียน/ตารางสอบ</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

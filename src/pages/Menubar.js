@@ -15,7 +15,6 @@ const Menubar = () => {
   return (
     <View style={styles.container}>
       <View style={styles.menubarContainer}>
-        <CustomButton title="ผลการเรียน" onPress={() => handlePress('ผลการเรียน')} color="#4CAF50" />
         <CustomButton
           title="ลงทะเบียน/เพิ่ม-ถอนรายวิชา"
           onPress={() => handlePress('ลงทะเบียน/เพิ่ม-ถอนรายวิชา')}

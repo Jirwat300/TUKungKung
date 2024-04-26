@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginPage from './src/pages/LoginPage';
-import EditpersonalInfoPersonalInfo from './src/pages/EditpersonalInfo';
+import EditPersonalInfo from './src/pages/EditpersonalInfo';
 import { Ionicons } from '@expo/vector-icons';
 import FacilityHomepage from './src/pages/FacilityHomepage'; // Import is correct
 import Bookingpage from './src/pages/Bookingpage.js';
@@ -15,7 +15,8 @@ import HornaiiPage from './src/pages/Hornaii.js';
 import HealthyServicePage from './src/pages/HealthyService.js';
 import Timetable from './src/pages/Timetable.js'
 import Menubar from './src/pages/Menubar.js'
-
+import UserInfopage from './src/pages/UserInfopage.js';
+import StudentCardPage from './src/pages/StudentCard.js';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -51,6 +52,31 @@ const FacilityStack = () => (
       name="HealthyService"
       component={HealthyServicePage}
       options={{ title: 'Healthy' }}
+    />
+  </Stack.Navigator>
+);
+
+const ProfileStack = () => (
+  <Stack.Navigator>
+    <Stack.Screen
+      name="Profile"
+      component={UserProfile}
+      options={{ title: 'Profile' }}
+    />
+    <Stack.Screen
+      name="UserInfo"
+      component={UserInfopage}
+      options={{ title: 'UserInfo' }}
+    />
+    <Stack.Screen
+      name="StudentCard"
+      component={StudentCardPage}
+      options={{ title: 'StudentCard' }}
+    />
+    <Stack.Screen
+      name="EditInfo"
+      component={EditPersonalInfo}
+      options={{ title: 'EditInfo' }}
     />
   </Stack.Navigator>
 );
@@ -97,7 +123,7 @@ const App = () => {
           <Tab.Screen name="Facility" component={FacilityStack} options={{ headerShown: false }} />
           <Tab.Screen name="Timetable" component={Timetable} options={{ title: 'TimeTable' }} />
           <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
-          <Tab.Screen name="Profile" component={UserProfile} options={{ title: 'Profile' }} />
+          <Tab.Screen name="UserProfile" component={ProfileStack} options={{ headerShown: false }} />
           <Tab.Screen name="Menubar" component={Menubar} options={{ title: 'Menubar' }} />
         </Tab.Navigator>
       ) : (

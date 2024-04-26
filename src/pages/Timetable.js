@@ -10,32 +10,39 @@ const FirstRoute = () => (
     </TouchableOpacity>
     <View style={styles.textBoxContainer}>
       <View style={[styles.textBox, { backgroundColor: '#FFC107' }]}>
-        <Text style={styles.header}>Header 1</Text>
-        <Text style={styles.description}>Description 1</Text>
+        <Text style={styles.header}>CH171</Text>
+        <Text style={styles.description}>13.30 - 16.30</Text>
+        <Text style={styles.description}>Doctor Stephen Strange</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#4CAF50' }]}>
-        <Text style={styles.header}>Header 2</Text>
-        <Text style={styles.description}>Description 2</Text>
+        <Text style={styles.header}>CN311</Text>
+        <Text style={styles.description}>09.30 - 12.30</Text>
+        <Text style={styles.description}>Mr. Henry Hum</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#2196F3' }]}>
-        <Text style={styles.header}>Header 3</Text>
-        <Text style={styles.description}>Description 3</Text>
+        <Text style={styles.header}>CN321</Text>
+        <Text style={styles.description}>09.30 - 12.30</Text>
+        <Text style={styles.description}>Mrs. Samantha Gorilla</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#9C27B0' }]}>
-        <Text style={styles.header}>Header 4</Text>
-        <Text style={styles.description}>Description 4</Text>
+        <Text style={styles.header}>PC280</Text>
+        <Text style={styles.description}>16.30 - 19.30</Text>
+        <Text style={styles.description}>Mr. Pomm SheFu</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#FF9800' }]}>
-        <Text style={styles.header}>Header 5</Text>
-        <Text style={styles.description}>Description 5</Text>
+        <Text style={styles.header}>SF221</Text>
+        <Text style={styles.description}>13.30 - 16.30</Text>
+        <Text style={styles.description}>Doctor Argh Semo</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#673AB7' }]}>
-        <Text style={styles.header}>Header 6</Text>
-        <Text style={styles.description}>Description 6</Text>
+        <Text style={styles.header}>SF222</Text>
+        <Text style={styles.description}>13.30 - 16.30</Text>
+        <Text style={styles.description}>Doctor Augay Kuaytiew</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#00BCD4' }]}>
-        <Text style={styles.header}>Header 7</Text>
-        <Text style={styles.description}>Description 7</Text>
+        <Text style={styles.header}>SF231</Text>
+        <Text style={styles.description}>09.30 - 12.30</Text>
+        <Text style={styles.description}>Mr. Andrew Nombig</Text>
       </View>
     </View>
   </ScrollView>
@@ -49,32 +56,39 @@ const SecondRoute = () => (
     </TouchableOpacity>
     <View style={styles.textBoxContainer}>
       <View style={[styles.textBox, { backgroundColor: '#FFC107' }]}>
-        <Text style={styles.header}>Header 1</Text>
-        <Text style={styles.description}>Description 1</Text>
+        <Text style={styles.header}>CH171</Text>
+        <Text style={styles.description}>Room 610</Text>
+        <Text style={styles.description}>09.00 - 12.00</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#4CAF50' }]}>
-        <Text style={styles.header}>Header 2</Text>
-        <Text style={styles.description}>Description 2</Text>
+        <Text style={styles.header}>CN311</Text>
+        <Text style={styles.description}>Room 210</Text>
+        <Text style={styles.description}>09.00 - 12.00</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#2196F3' }]}>
-        <Text style={styles.header}>Header 3</Text>
-        <Text style={styles.description}>Description 3</Text>
+        <Text style={styles.header}>CN321</Text>
+        <Text style={styles.description}>Room 103</Text>
+        <Text style={styles.description}>09.00 - 12.00</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#9C27B0' }]}>
-        <Text style={styles.header}>Header 4</Text>
-        <Text style={styles.description}>Description 4</Text>
+        <Text style={styles.header}>PC280</Text>
+        <Text style={styles.description}>Room 710</Text>
+        <Text style={styles.description}>12.00 - 15.00</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#FF9800' }]}>
-        <Text style={styles.header}>Header 5</Text>
-        <Text style={styles.description}>Description 5</Text>
+        <Text style={styles.header}>SF221</Text>
+        <Text style={styles.description}>Room 304</Text>
+        <Text style={styles.description}>12.00 - 15.00</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#673AB7' }]}>
-        <Text style={styles.header}>Header 6</Text>
-        <Text style={styles.description}>Description 6</Text>
+        <Text style={styles.header}>SF222</Text>
+        <Text style={styles.description}>Room 610</Text>
+        <Text style={styles.description}>12.00 - 15.00</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#00BCD4' }]}>
-        <Text style={styles.header}>Header 7</Text>
-        <Text style={styles.description}>Description 7</Text>
+        <Text style={styles.header}>SF231</Text>
+        <Text style={styles.description}>Room 505/1</Text>
+        <Text style={styles.description}>12.00 - 15.00</Text>
       </View>
     </View>
   </ScrollView>

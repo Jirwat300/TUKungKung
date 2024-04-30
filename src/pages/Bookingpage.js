@@ -1,8 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import ScholarCard from '../components/ScholarCard'; // Ensure this path matches the location of your BookingCard component
+import ScholarCard from '../components/ScholarCard'; 
 
-// Example data for the booking options
 const bookingOptions = [
   {
     id: 1,

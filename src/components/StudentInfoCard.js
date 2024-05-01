@@ -1,13 +1,20 @@
 import React from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const StudentInfoCard = ({ studentData }) => {
+    const navigation = useNavigation();
+
+    const handleViewStudentCard = () => {
+        navigation.navigate('ExamStudent');
+    };
+
     return (
         <View style={styles.card}>
             <View style={styles.topSection}>
                 <View style={styles.imageContainer}>
                     <Image
-                        source={{ uri: studentData.imageUri }}
+                        source={studentData.imageUri}
                         style={styles.studentImage}
                     />
                 </View>
@@ -26,7 +33,7 @@ const StudentInfoCard = ({ studentData }) => {
                         value={studentData.faculty}
                         editable={false}
                     />
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={handleViewStudentCard}>
                         <Text style={styles.buttonText}>ดูบัตรนักศึกษา</Text>
                     </TouchableOpacity>
                 </View>

@@ -7,19 +7,19 @@ const scholarData = [
   {
     id: 1,
     title: 'สิทธิการรักษาพยาบาล(โรงพยาบาลธรรมศาสตร์)',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Hospital.jpg'),
     onApply: () => console.log('Applied to Hospital'),
   },
   {
     id: 2,
     title: 'Viva City',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Vivacity.jpg'),
     onApply: () => console.log('Applied to Viva City'),
   },
   {
     id: 3,
     title: 'Well Being',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Wellbeing.jpg'),
     onApply: () => console.log('Applied to Well Being'),
   },
 ];

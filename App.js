@@ -18,6 +18,7 @@ import Menubar from './src/pages/Menubar.js'
 import UserInfopage from './src/pages/UserInfopage.js';
 import StudentCardPage from './src/pages/StudentCard.js';
 import SchoolRecordPage from './src/pages/SchoolRecordPage.js'
+import ExamStudent from './src/pages/ExStudentCard.js'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -84,6 +85,12 @@ const ProfileStack = () => (
       component={SchoolRecordPage}
       options={{ title: 'SchoolRecord' }}
     />
+    <Stack.Screen
+      name="ExamStudent"
+      component={ExamStudent}
+      options={{ title: 'ExamStudent' }}
+    />
+
   </Stack.Navigator>
 );
 
@@ -107,30 +114,27 @@ const App = () => {
       {isLoggedIn ? (
         <Tab.Navigator
           screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused, color, size }) => {
+            tabBarIcon: ({ focused }) => {
               let iconName;
-              if (route.name === 'Facility') {
-                iconName = focused ? 'ios-appstore-o' : 'ios-appstore-o-outline';
-              } else if (route.name === 'Home') {
-                iconName = focused ? 'ios-home' : 'ios-home-outline';
+              if (route.name === 'Home') {
+                focused ? iconName = 'home' : iconName = 'home-outline';
+              } else if (route.name === 'Facility') {
+                focused ? iconName = 'planet' : iconName = 'planet-outline';
               } else if (route.name === 'Timetable') {
-                iconName = focused ? 'ios-calendae' : 'ios-calendar-outline';
-              } else if (route.name === 'Profile') {
-                iconName = focused ? 'ios-person' : 'ios-person-outline';
-              } else if (route.name === 'Menubar') {
-                iconName = focused ? 'ios-menu' : 'ios-menu-outline';
-              }
-              return iconName ? <Ionicons name={iconName} size={size} color={color} /> : null;
+                focused ? iconName = 'time' : iconName = 'time-outline';
+              } else if (route.name === 'UserProfile') {
+                focused ? iconName = 'person-circle' : iconName = 'person-circle-outline';
+              } 
+              return iconName ? <Ionicons name={iconName} size={24} color="black" /> : null;
             },
             tabBarActiveTintColor: 'tomato',
             tabBarInactiveTintColor: 'gray',
           })}
         >
+          <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
           <Tab.Screen name="Facility" component={FacilityStack} options={{ headerShown: false }} />
           <Tab.Screen name="Timetable" component={Timetable} options={{ title: 'TimeTable' }} />
-          <Tab.Screen name="Home" component={Home} options={{ title: 'Home' }} />
           <Tab.Screen name="UserProfile" component={ProfileStack} options={{ headerShown: false }} />
-          <Tab.Screen name="Menubar" component={Menubar} options={{ title: 'Menubar' }} />
         </Tab.Navigator>
       ) : (
         <AuthStack setIsLoggedIn={setIsLoggedIn} />

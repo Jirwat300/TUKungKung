@@ -4,8 +4,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 const ScholarCard = ({ title, imageUrl, onApply }) => {
   return (
     <View style={styles.card}>
-      <Image source={{ uri: imageUrl }} style={styles.image} />
-      {/* Title Container with centered text */}
+      <Image source={imageUrl} style={styles.image} />
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{title}</Text>
       </View>
@@ -27,8 +26,8 @@ const styles = StyleSheet.create({
     elevation: 3,
     backgroundColor: '#fff',
     position: 'relative',
-    marginHorizontal: '50px',
-    marginVertical: '20px',
+    marginHorizontal: 10,  // Updated to a valid unit
+    marginVertical: 10,    // Adds space between cards
   },
   image: {
     width: '100%',
@@ -36,7 +35,6 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   titleContainer: {
-    // Align text to the center
     alignItems: 'center',
     padding: 10,
   },
@@ -48,7 +46,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 10,
     top: 10,
-    backgroundColor: 'green', // Change to green
+    backgroundColor: 'green',
     padding: 8,
     borderRadius: 5,
   },

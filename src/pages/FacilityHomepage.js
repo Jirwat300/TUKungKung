@@ -1,6 +1,9 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
+const { width } = Dimensions.get('window');
+const buttonWidth = width / 2 - 30;  // Adjust this value to change the spacing and size
 
 const FacilityHomepage = ({ navigation }) => {
   const handlePress = (screenName) => {
@@ -8,14 +11,12 @@ const FacilityHomepage = ({ navigation }) => {
     navigation.navigate(screenName);
   };
 
-  const CustomButton = ({ title, onPress, color = '#FFD13F', iconName }) => (
-    <TouchableOpacity onPress={onPress} style={[styles.buttonContainer, { backgroundColor: color }]}>
-      <View style={styles.buttonContent}>
-        <View style={styles.buttonIconContainer}>
-          <Icon name={iconName} size={24} color="#C3002F" />
-        </View>
-        <Text style={styles.buttonText}>{title}</Text>
+  const CustomButton = ({ title, onPress, color, iconName }) => (
+    <TouchableOpacity onPress={onPress} style={[styles.buttonContainer, { backgroundColor: color, width: buttonWidth, height: buttonWidth }]}>
+      <View style={styles.buttonIcon}>
+        <Icon name={iconName} size={60} color="#FFFFFF" />
       </View>
+      <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
 
@@ -24,32 +25,32 @@ const FacilityHomepage = ({ navigation }) => {
       <CustomButton
         title="การจอง"
         onPress={() => handlePress('Booking')}
-        color="#FFD13F"
         iconName="event-note"
+        color="#F37DE3" // Red
       />
       <CustomButton
         title="เเผนที่รถEV"
         onPress={() => handlePress('Evmap')}
-        color="#FFD13F"
         iconName="map"
+        color="#4D96FF" // Blue
       />
       <CustomButton
         title="บริการด้านสุขภาพ"
         onPress={() => handlePress('HealthyService')}
-        color="#FFD13F"
         iconName="favorite"
+        color="#FF6B6B" // Yellow
       />
       <CustomButton
         title="หอใน"
         onPress={() => handlePress('Hornaii')}
-        color="#FFD13F"
         iconName="home"
+        color="#4CAF50" // Green
       />
       <CustomButton
         title="ทุนการศึกษา"
         onPress={() => handlePress('Scholar')}
-        color="#FFD13F"
         iconName="school"
+        color="#BA68C8" // Purple
       />
     </View>
   );
@@ -58,35 +59,32 @@ const FacilityHomepage = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     alignItems: 'center',
+    justifyContent: 'space-around',
     padding: 10,
     backgroundColor: '#F5F5F5',
   },
   buttonContainer: {
-    width: '90%',
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    margin: 10,
-    borderRadius: 10,
+    justifyContent: 'center',
     alignItems: 'center',
-    elevation: 3,
+    margin: 10,
+    borderRadius: 20,
+    elevation: 4,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
-    shadowRadius: 1.5,
+    shadowRadius: 2,
   },
-  buttonContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  buttonIconContainer: {
-    marginRight: 8,
+  buttonIcon: {
+    marginBottom: 8,
   },
   buttonText: {
-    color: '#C3002F',
+    color: '#FFFFFF',
     fontSize: 18,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 

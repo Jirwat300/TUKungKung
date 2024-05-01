@@ -6,26 +6,32 @@ import ScholarCard from '../components/ScholarCard'; // Adjust the import path a
 const scholarData = [
   {
     id: 1,
-    title: 'Zone A',
-    imageUrl: 'https://via.placeholder.com/150',
+    title: 'หอเเพทย์',
+    imageUrl: require('../../public/Zone doctor.jpg'),
     onApply: () => console.log('Applied to hornaii A'),
   },
   {
     id: 2,
     title: 'Zone B',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Zone B.jpg'),
     onApply: () => console.log('Applied to hornaii B'),
   },
   {
     id: 3,
     title: 'Zone C',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Zone C.jpg'),
     onApply: () => console.log('Applied to hornaii C'),
   },
   {
     id: 4,
-    title: 'Zone D',
-    imageUrl: 'https://via.placeholder.com/150',
+    title: 'Zone F',
+    imageUrl: require('../../public/Zone F.jpg'),
+    onApply: () => console.log('Applied to hornaii D'),
+  },
+  {
+    id: 5,
+    title: 'Zone M',
+    imageUrl: require('../../public/Zone M.jpg'),
     onApply: () => console.log('Applied to hornaii D'),
   },
   // Add more items as needed

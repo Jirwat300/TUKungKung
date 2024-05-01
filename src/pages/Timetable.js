@@ -59,36 +59,43 @@ const SecondRoute = () => (
         <Text style={styles.header}>CH171</Text>
         <Text style={styles.description}>Room 610</Text>
         <Text style={styles.description}>09.00 - 12.00</Text>
+        <Text style={styles.description}>12 มีนาคม 2567</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#4CAF50' }]}>
         <Text style={styles.header}>CN311</Text>
         <Text style={styles.description}>Room 210</Text>
         <Text style={styles.description}>09.00 - 12.00</Text>
+        <Text style={styles.description}>13 มีนาคม 2567</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#2196F3' }]}>
         <Text style={styles.header}>CN321</Text>
         <Text style={styles.description}>Room 103</Text>
         <Text style={styles.description}>09.00 - 12.00</Text>
+        <Text style={styles.description}>14 มีนาคม 2567</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#9C27B0' }]}>
         <Text style={styles.header}>PC280</Text>
         <Text style={styles.description}>Room 710</Text>
         <Text style={styles.description}>12.00 - 15.00</Text>
+        <Text style={styles.description}>12 มีนาคม 2567</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#FF9800' }]}>
         <Text style={styles.header}>SF221</Text>
         <Text style={styles.description}>Room 304</Text>
         <Text style={styles.description}>12.00 - 15.00</Text>
+        <Text style={styles.description}>13 มีนาคม 2567</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#673AB7' }]}>
         <Text style={styles.header}>SF222</Text>
         <Text style={styles.description}>Room 610</Text>
         <Text style={styles.description}>12.00 - 15.00</Text>
+        <Text style={styles.description}>14 มีนาคม 2567</Text>
       </View>
       <View style={[styles.textBox, { backgroundColor: '#00BCD4' }]}>
         <Text style={styles.header}>SF231</Text>
         <Text style={styles.description}>Room 505/1</Text>
         <Text style={styles.description}>12.00 - 15.00</Text>
+        <Text style={styles.description}>15 มีนาคม 2567</Text>
       </View>
     </View>
   </ScrollView>

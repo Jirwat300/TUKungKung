@@ -6,13 +6,13 @@ const bookingOptions = [
   {
     id: 1,
     title: 'Booking Study Room',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Library.png'), // Use require here
     onBook: () => console.log('Booked Study Room'),
   },
   {
     id: 2,
     title: 'Booking Court',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Court.png'), // Use require here
     onBook: () => console.log('Booked Court'),
   }
 ];
@@ -20,12 +20,12 @@ const bookingOptions = [
 const Bookingpage = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {bookingOptions.map((scholar) => (
+      {bookingOptions.map((option) => (
         <ScholarCard
-          key={scholar.id}
-          title={scholar.title}
-          imageUrl={scholar.imageUrl}
-          onBook={scholar.onBook}
+          key={option.id}
+          title={option.title}
+          imageUrl={option.imageUrl}
+          onBook={option.onBook}
         />
       ))}
     </ScrollView>

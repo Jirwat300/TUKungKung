@@ -7,19 +7,19 @@ const scholarData = [
   {
     id: 1,
     title: 'SCG',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/SCG.jpg'),
     onApply: () => console.log('Applied to Scholarship A'),
   },
   {
     id: 2,
     title: 'Smartclick',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Smartclick.jpg'),
     onApply: () => console.log('Applied to Scholarship B'),
   },
   {
     id: 3,
     title: 'Lazada',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../../public/Lazada.jpg'),
     onApply: () => console.log('Applied to Scholarship B'),
   },
   // Add more items as needed
